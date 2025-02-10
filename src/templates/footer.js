@@ -6,13 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {    const link = document.c
     const footer = document.createElement('footer');
     footer.innerHTML = `
         <div class="footer">
-            <img src="src/css/templates/logofooter.png" alt="logo" class="logofooter">
+            <img src="src/images/logofooter.png" alt="logo" class="logofooter">
             <nav>
                 <ul>
                     <li><a href="/sobre">Sobre o Projeto</a></li>
                     <li><p> | </p></li>
                     <li><a href="Participantes.html">Participantes</a></li>
                 </ul>
+                <p class="fakeTermos">Termo de uso      Política de Privadidade</p>
+                <p class="fakeProperty">® megaStok</p>
             </nav>
         </div>
     `;
