@@ -1,0 +1,19 @@
+.footer {
+    background-color: #5FADBA;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    color: #FFEFD3;
+}
+
+.logofooter{
+    justify-content: center;
+    align-items: center;
+}
