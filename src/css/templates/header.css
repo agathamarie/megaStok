@@ -1,0 +1,34 @@
+header{
+    background-color: #0191AA;
+    color: #FFEFD3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 85px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column; 
+    font-size: 33px;
+    font-weight: bold;
+    align-items: flex-start;
+}
+
+.logo span{
+    font-style: italic;
+    font-size: 33px;
+    font-weight: normal;
+    line-height: 0.4;
+    letter-spacing: 4px;
+}
+
+#icons{
+    display: flex;
+    gap: 45px;
+}
+
+#icons i {
+    color: #FFEFD3;
+    font-size: 32;
+}
