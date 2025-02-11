@@ -1,4 +1,10 @@
-header{
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
     background-color: #0191AA;
     color: #FFEFD3;
     display: flex;
@@ -8,27 +14,22 @@ header{
 }
 
 .logo{
+    width: 100px;
+}
+
+
+.navIcons{
     display: flex;
-    flex-direction: column; 
-    font-size: 33px;
-    font-weight: bold;
-    align-items: flex-start;
+    gap: 30px;
+    align-items: center;
 }
 
-.logo span{
-    font-style: italic;
-    font-size: 33px;
-    font-weight: normal;
-    line-height: 0.4;
-    letter-spacing: 4px;
+.icon{
+    width: 25px;
+    height: 25px;
 }
 
-#icons{
-    display: flex;
-    gap: 45px;
-}
-
-#icons i {
-    color: #FFEFD3;
-    font-size: 32;
+.userImage{
+    width: 30px;
+    height: 30px;
 }
