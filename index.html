@@ -7,35 +7,19 @@
     <link rel="stylesheet" href="./src/css/pages/index.css">
     <title>Mega Stok</title>
 </head>
+
 <body>
-    <script src="src/templates/header.js"></script>
-
-    <div class="pesquisas">
-        <select class="categoria">
-            <option selected disabled placeholder="Selecionar categoria"> Selecionar categoria</option>
-            <option value="electronics">electronics</option>
-            <option value="jewelery">jewelery</option>
-            <option value="men's clothing">men's clothing</option>
-            <option value="women's clothing">women's clothing</option>
-        </select>
-
-        <div class="search-box">
-            <input type="text" placeholder="">
-            <button type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+        <div class="pesquisas" id="pesquisas">
+        </div>
+        
+        <br>
+        
+        <div class="StoreContainer" id= "StoreContainer">
         </div>
 
-    </div>
 
-    <br>
-
-    <div class="StoreContainer" id = "StoreContainer">
-
-    </div>
-    
-    <script src="./src/pages/script.js"></script>
-
-    <script src="src/templates/footer.js"></script>
+    <script type ="module" src="./src/pages/script.js"></script>
+    <script type="module" src="./src/templates/header.js"></script>
+    <script type="" src="src/templates/footer.js"></script>
 </body>
 </html>
