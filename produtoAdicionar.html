@@ -9,8 +9,30 @@
 <body>
     <script src="src/templates/header.js"></script>
 
-    
+    <script src="src/templates/menu_edicao.js"></script>
 
+
+    <form method="post" enctype="multipart/form-data">
+
+        <label for="titleInput">Título</label>
+        <input id="titleInput" type="text" name="titulo">
+        
+        <label for="priceInput">Preço</label>
+        <input id="priceInput" type="text" name="preco">
+
+        <label for="descriptionInput">Descrição</label>
+        <input id="descriptionInput" type="text" name="descricao">
+
+        <label for="categoryInput">Categoria</label>
+        <input id="categoryInput" type="text" name="categoria">
+
+        <label for="imageInput">Imagem</label>
+        <input id="imageInput" type="file" name="imagem">
+
+        <button id="btnAdicionar">Adicionar</button>
+
+    </form>
     <script src="src/templates/footer.js"></script>
 </body>
+    <script src="src/pages/produtoAdicionar.js"></script>
 </html>
