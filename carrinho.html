@@ -1,16 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Carrinho</title>
-    <link rel="stylesheet" href="./src/css/pages/carrinho.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Carrinho</title>
+  <link rel="stylesheet" href="src/css/pages/carrinho.css"> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 </head>
-<body>
-    <script src="src/templates/header.js"></script>
 
+<!--Tailwind CSS -->
+<body class="bg-gray-100 p-4">
+<div class="max-w-4xl mx-auto">
     
 
-    <script src="src/templates/footer.js"></script>
+    <div class="product-item">
+      <img alt="Mens Casual Premium Slim Fit T-Shirts" class="product-image" src="src/images/slim.png" />
+      <div class="product-info">
+        <h2 class="product-title">Titulo</h2>
+        <p class="product-description">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <div class="quantity-control">
+          <button class="quantity-btn">-</button>
+          <span class="quantity">0</span>
+          <button class="quantity-btn">+</button>
+        </div>
+      </div>
+      <div class="product-price">
+        <p>R$ 22,03</p>
+      </div>
+      <button class="delete-btn">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    </div>
+
+    <div class="product-item">
+        <img alt="Mens Casual Premium Slim Fit T-Shirts" class="product-image" src="src/images/slim.png" />
+        <div class="product-info">
+          <h2 class="product-title">Titulo</h2>
+          <p class="product-description">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <div class="quantity-control">
+            <button class="quantity-btn">-</button>
+            <span class="quantity">0</span>
+            <button class="quantity-btn">+</button>
+          </div>
+        </div>
+        <div class="product-price">
+          <p>R$ 22,03</p>
+        </div>
+        <button class="delete-btn">
+          <i class="fas fa-trash-alt"></i>
+        </button>
+      </div>
+
+      <div class="product-item">
+        <img alt="Mens Casual Premium Slim Fit T-Shirts" class="product-image" src="src/images/slim.png" />
+        <div class="product-info">
+          <h2 class="product-title">Titulo</h2>
+          <p class="product-description">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <div class="quantity-control">
+            <button class="quantity-btn">-</button>
+            <span class="quantity">0</span>
+            <button class="quantity-btn">+</button>
+          </div>
+        </div>
+        <div class="product-price">
+          <p>R$ 22,03</p>
+        </div>
+        <button class="delete-btn">
+          <i class="fas fa-trash-alt"></i>
+        </button>
+      </div>
+
+
+
+  <script src="src/templates/footer.js"></script>
+
+ <!--funções de aumentar/diminuir e de apagar produto --> 
+  <script>  
+function updateQuantity(increment, button) {
+   
+    const quantityElement = button.parentElement.querySelector('.quantity');
+    let quantity = parseInt(quantityElement.textContent);
+    const unitPrice = 22.03; 
+    const priceElement = button.closest('.product-item').querySelector('.product-price p');
+    if (increment) {
+        quantity++;
+    } else if (quantity > 0) {
+        quantity--;
+    }
+    quantityElement.textContent = quantity;
+    const totalPrice = (unitPrice * quantity).toFixed(2); 
+    priceElement.textContent = `R$ ${totalPrice}`;
+}
+
+function deleteProduct(button) {
+    
+    const productItem = button.closest('.product-item');
+
+    
+    productItem.remove();
+}
+
+document.querySelectorAll('.quantity-btn').forEach(button => {
+    button.addEventListener('click', function(event) {
+        const isIncrement = event.target.textContent === '+';
+        updateQuantity(isIncrement, button);
+    });
+});
+
+
+document.querySelectorAll('.delete-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        deleteProduct(button);
+    });
+});
+  </script>
 </body>
 </html>
