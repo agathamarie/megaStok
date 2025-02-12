@@ -39,3 +39,132 @@ header{
     color: #FFEFD3;
     font-size: 32px;
 }
+
+.pesquisas {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    margin-top: 80px
+}
+/* / tenho q ajeitar o espaçamento / */
+
+.categoria {
+    padding: 8px;
+    border: 1px solid #bdbdbd;
+    border-radius: 50px;
+    background: white;
+    cursor: pointer;
+    width: 263px;
+    height: 38px;
+}
+
+.categoria:focus {
+    outline: none;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    border: 1px solid #bdbdbd;
+    overflow: hidden;
+    width: 278px;
+    height: 38px;
+    padding: 4px 12px;
+}
+
+.search-box input{
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 38px;
+}
+
+.search-box input:focus-visible{
+    outline: none;
+}
+
+.search-box button {
+    background-color: transparent;
+    border:  none;
+    cursor: pointer;
+}
+
+.search-box button i {
+    font-size: 15px;
+    color: #1d1d1d;
+}
+
+/* / container dos produtos / */
+
+.StoreContainer {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    padding: 20px;
+}
+
+/* / card dos produtos */ 
+
+.StoreCard{
+    width: 200px;
+    height: 250px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+    padding: 7px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background: transparent;
+}
+
+.imgContainer img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.info {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.number {
+    display: none;
+}
+
+.title {
+    font-size: 14px;
+    color: #474747;
+    font-weight: 500;
+    text-align: left;
+    max-width: 100%;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.price {
+    font-size: 20px;
+    color: #01AA47;
+    font-weight: 500;
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 10px;
+
+}
