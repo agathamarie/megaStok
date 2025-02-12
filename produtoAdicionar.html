@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil Usuário</title>
-    <link rel="stylesheet" href="./src/css/pages/produtoAlterar.css">
+    <link rel="stylesheet" href="./src/css/templates/header.css">
 </head>
 <body>
-    <script src="src/templates/header.js"></script>
 
-    <script src="src/templates/menu_edicao.js"></script>
-
+    
 
     <form method="post" enctype="multipart/form-data">
 
@@ -32,7 +30,14 @@
         <button id="btnAdicionar">Adicionar</button>
 
     </form>
-    <script src="src/templates/footer.js"></script>
+
+    <script type="module">
+        import header from './src/templates/header.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.innerHTML += header();
+        });
+    </script>
 </body>
-    <script src="src/pages/produtoAdicionar.js"></script>
+    
 </html>
