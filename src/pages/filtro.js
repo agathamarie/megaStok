@@ -1,31 +1,32 @@
-import {fetchProducts} from "./script";
+import fetchProducts from "./produto.js";
 
-const renderizarFiltro = document.querySelector("#pesquisas");
+const pesquisasContainer = document.querySelector("#pesquisas");
 
 const fetchCategories = async () => {
-    const categoriesurl = `https://fakestoreapi.com/products/categories`;
+    try {
+        const categoriesUrl = `https://fakestoreapi.com/products/categories`;
+        const categories = await fetch(categoriesUrl).then(res => res.json());
 
+        pesquisasContainer.innerHTML = "";
 
+        const selectElement = document.createElement('select');
+        selectElement.classList.add("categoria"); 
+        selectElement.innerHTML = `
+            <option selected disabled>Selecionar Categoria</option>
+            ${categories.map(category => `<option value="${category}">${category}</option>`).join('')}
+        `;
 
+        selectElement.addEventListener("change", (event) => {
+            fetchProducts(event.target.value);
+        });
 
-
-    const selectElement = document.createElement('select');
-    selectElement.classList.add("categoria"); 
-
-    const categories = await res.json();
-
-    selectElement.InnerHTML = `
-    <option selected disabled>Selecionar Categoria</option>
-        ${categories.map(category => `<option value="${category}">${category}</option>`).join('')}
-    `;
-
-
-    productCategories.innerHTML = categoriesInnerHTML;
-    
-    if (renderizarFiltro) {
-        renderizarFiltro.appendChild(selectElement);
+        pesquisasContainer.appendChild(selectElement);
+    } catch (error) {
+        console.error("Erro ao buscar categorias:", error);
     }
+    
 };
 
 fetchCategories();
+export default fetchCategories;
     

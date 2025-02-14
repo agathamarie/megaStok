@@ -42,10 +42,13 @@ header{
 
 .pesquisas {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    margin-top: 80px
+    /* margin-top: 80px; */
+    margin: 50px;
+    padding: 50px;
+
 }
 /* / tenho q ajeitar o espaçamento / */
 
@@ -57,6 +60,7 @@ header{
     cursor: pointer;
     width: 263px;
     height: 38px;
+    font-size: 16px;
 }
 
 .categoria:focus {
