@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+    <script type ="module" src="./src/pages/script.js"></script>
     <script src="src/templates/header.js"></script>
     
     <div class="container">
@@ -39,7 +39,7 @@
       
           <div class="buttons">
             <button class="add-to-cart">ADICIONAR AO CARRINHO</button>
-            <button class="add-to-wishlist">
+            <button class="add-to-wishlist" id="add-to-wishlist">
               <i class="far fa-heart"></i>
             </button>
           </div>
@@ -47,101 +47,58 @@
       </div>
       
       <script>
-      
         const imagens = document.querySelectorAll('.imagens');
-      
+        const addToWishlistButton = document.getElementById('add-to-wishlist');
+
         // Adicionando evento de clique para cada imagem
         imagens.forEach(function(img) {
           img.addEventListener('click', function() {
-           
+            // Pegando o src da imagem clicada
             const sourceDaNova = img.src;
-      
-          
             const srcClean = transformarParaRelativo(sourceDaNova);
-            console.log(srcClean);
-            
-            
             const imgPrincipal = document.getElementById('main-product-image');
             imgPrincipal.src = srcClean;
+          });
         });
-    });
-    console.log();
-      
-        // Função para transformar URLs absolutas em re
+
+        // Função para transformar URLs absolutas em relativas
         const transformarParaRelativo = (url) => {
-            console.log(url + " urlllllll");
             let partes = url.split('/'); 
             partes.splice(0, 3);
-            console.log(partes.join('/') + " corteee");
             return partes.join('/'); 
         };
-        
-        document.addEventListener('DOMContentLoaded', function() {
-    const addToCartBtn = document.querySelector('.add-to-cart');
-    
-    const addToWishlistIcon = document.querySelector('.add-to-wishlist i');
 
-   
-    function obterDadosProduto() {
-      return {
-        id: 'barraca1', 
-        titulo: document.getElementById('product-title').innerText,
-        categoria: document.getElementById('product-category').innerText,
-        descricao: document.getElementById('product-description').innerText,
-        preco: document.getElementById('product-price').innerText,
-        imagem: document.getElementById('main-product-image').src
-      };
-    }
+        // Função para adicionar produto aos favoritos
+        const adicionarAosFavoritos = () => {
+          const productTitle = document.getElementById('product-title').innerText;
+          const productCategory = document.getElementById('product-category').innerText;
+          const productDescription = document.getElementById('product-description').innerText;
+          const productPrice = document.getElementById('product-price').innerText;
+          const productImage = document.getElementById('main-product-image').src;
 
-    
-    addToCartBtn.addEventListener('click', function() {
-      const produto = obterDadosProduto();
-      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-      
-      const indexExistente = carrinho.findIndex(item => item.id === produto.id);
-      if (indexExistente !== -1) {
-       
-        carrinho[indexExistente].quantidade = (carrinho[indexExistente].quantidade || 1) + 1;
-      } else {
-        produto.quantidade = 1;
-        carrinho.push(produto);
-      }
-      
-      localStorage.setItem('carrinho', JSON.stringify(carrinho));
-      alert('Produto adicionado ao carrinho!');
-      
-      
-      window.location.href = 'carrinho.html';
-    });
+          const produto = {
+            title: productTitle,
+            category: productCategory,
+            description: productDescription,
+            price: productPrice,
+            image: productImage
+          };
 
-    
-    addToWishlistIcon.addEventListener('click', function() {
-      const produto = obterDadosProduto();
-      let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-      
-      const index = favoritos.findIndex(item => item.id === produto.id);
-      
-      if (index !== -1) {
-       
-        favoritos.splice(index, 1);
-   
-        addToWishlistIcon.classList.remove('fas');
-        addToWishlistIcon.classList.add('far');
-        alert('Produto removido dos favoritos!');
-      } else {
-       
-        favoritos.push(produto);
-       
-        addToWishlistIcon.classList.remove('far');
-        addToWishlistIcon.classList.add('fas');
-        alert('Produto adicionado aos favoritos!');
-      }
-      
-      localStorage.setItem('favoritos', JSON.stringify(favoritos));
-    });
-  });
-  
+          // Recupera os produtos favoritos do localStorage
+          let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+          
+          // Adiciona o novo produto
+          favoritos.push(produto);
+          
+          // Salva novamente no localStorage
+          localStorage.setItem('favoritos', JSON.stringify(favoritos));
+          alert('Produto adicionado aos favoritos!');
+        };
+
+        // Adiciona evento de clique ao botão de adicionar aos favoritos
+        addToWishlistButton.addEventListener('click', adicionarAosFavoritos);
       </script>
-  <script src="src/templates/footer.js"></script>
+      
+      <script src="src/templates/footer.js"></script>
 </body>
 </html>

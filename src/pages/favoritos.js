@@ -33,5 +33,6 @@ function removeFromFavoritos(productId) {
     location.reload(); // Recarrega a página para atualizar a lista de favoritos
 }
 
+
 // Carregar produtos favoritos na página de favoritos
 loadFavoritos();

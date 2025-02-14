@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +8,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 1px;
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura total da tela */
@@ -43,5 +44,13 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 25px 85px;
-    margin-top: auto; /* Faz o header ir para o final da página */
+    /* Remover a linha abaixo para manter o header no topo */
+    /* margin-top: auto; */
+}
+footer {
+   
+    color: #FFEFD3;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto; /* Faz o footer ir para o final da página */
 }
