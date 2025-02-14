@@ -1,10 +1,10 @@
 
 import mostrarUsuario from "./usuarioform.js";
 
-const userId = sessionStorage.getItem("userId");
+const UserId = sessionStorage.getItem("UserId");
 
 
-fetch(`https://fakestoreapi.com/users/${userId}`)
+fetch(`https://fakestoreapi.com/users/${UserId}`)
     .then(res=>res.json())
     .then(json=> {
         console.log(json)
@@ -34,7 +34,7 @@ document.addEventListener("submit", (event) => {
         phone: infoUser.telefone.value
     }
 
-    fetch(`https://fakestoreapi.com/users/${userId}`, {
+    fetch(`https://fakestoreapi.com/users/${UserId}`, {
         method:"PATCH",
         body:JSON.stringify(jsonAtualizado)
     })
