@@ -30,13 +30,15 @@ const createProductCard = (product) => {
     const image = product.image;
 
     card.innerHTML = `
-        <div class="imgContainer">
-            <img src="${image}" alt="${title}" />
-        </div>
-        <div class="info">
-            <h3 class="title">${title}</h3>
-            <p class="price">${price}</p>
-        </div>
+        <a href="./produto.html" style="text-decoration:none;">
+            <div class="imgContainer">
+                <img src="${image}" alt="${title}" />
+            </div>
+            <div class="info">
+                <h3 class="title">${title}</h3>
+                <p class="price">${price}</p>
+            </div>
+        </a>
     `;
 
     StoreContainer.appendChild(card);

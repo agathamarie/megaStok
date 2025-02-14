@@ -111,22 +111,24 @@ header{
     justify-content: center;
     gap: 150px;
     padding: 20px;
+
 }
 
 /* / card dos produtos */ 
 
 .StoreCard{
-    width: 200px;
-    height: 250px;
+    width: 212px;
+    height: 260px;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
-    padding: 11px;
+    padding: 10px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    cursor: pointer;
 }
 
 
@@ -134,8 +136,8 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 120px;
-    height: 120px;
+    width: 185px;
+    height: 105px;
     background: transparent;
 }
 
@@ -143,6 +145,7 @@ header{
     max-width: 100%;
     max-height: 100%;
     border-radius: 10px;
+    align-items: center;
 }
 
 .info {
@@ -150,6 +153,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
 }
 
 .number {
@@ -160,19 +164,19 @@ header{
     font-size: 14px;
     color: #474747;
     font-weight: 500;
-    text-align: left;
+    text-align: justify;
     max-width: 100%;
     margin-top: 15px;
     margin-left: 10px;
-    text-overflow: clip;
+    text-overflow: ellipsis;
+
 }
 
 .price {
     font-size: 20px;
     color: #01AA47;
     font-weight: 500;
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: left;
     margin-left: 10px;
-
 }

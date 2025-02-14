@@ -2,6 +2,7 @@ import header from "../templates/header.js";
 import fetchCategories from "./filtro.js";
 import fetchProducts from "./produto.js";
 
+
 // Chama a header primeiro
 
 document.body.insertAdjacentHTML("afterbegin", header());
