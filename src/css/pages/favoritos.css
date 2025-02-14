@@ -1,6 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura total da tela */
 }
 
 h1 {
@@ -11,6 +21,7 @@ h1 {
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px 0;
+    flex: 1; /* Permite que os produtos ocupem o espaço disponível */
 }
 
 button {
@@ -23,4 +34,14 @@ button {
 
 button.remove {
     background-color: #dc3545;
+}
+
+header {
+    background-color: #0191AA;
+    color: #FFEFD3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 85px;
+    margin-top: auto; /* Faz o header ir para o final da página */
 }
