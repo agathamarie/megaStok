@@ -121,11 +121,12 @@ header{
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
-    padding: 7px;
+    padding: 11px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 
@@ -145,8 +146,10 @@ header{
 }
 
 .info {
-    margin-top: 15px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .number {
@@ -161,6 +164,7 @@ header{
     max-width: 100%;
     margin-top: 15px;
     margin-left: 10px;
+    text-overflow: clip;
 }
 
 .price {
