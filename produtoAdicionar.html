@@ -5,39 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil Usuário</title>
     <link rel="stylesheet" href="./src/css/templates/header.css">
+    <link rel="stylesheet" href="./src/css/templates/menu_editar.css">
 </head>
 <body>
 
-    
-
-    <form method="post" enctype="multipart/form-data">
-
-        <label for="titleInput">Título</label>
-        <input id="titleInput" type="text" name="titulo">
-        
-        <label for="priceInput">Preço</label>
-        <input id="priceInput" type="text" name="preco">
-
-        <label for="descriptionInput">Descrição</label>
-        <input id="descriptionInput" type="text" name="descricao">
-
-        <label for="categoryInput">Categoria</label>
-        <input id="categoryInput" type="text" name="categoria">
-
-        <label for="imageInput">Imagem</label>
-        <input id="imageInput" type="file" name="imagem">
-
-        <button id="btnAdicionar">Adicionar</button>
-
-    </form>
-
     <script type="module">
         import header from './src/templates/header.js';
+        import menuEdicao from './src/templates/menu_edicao.js';
 
         document.addEventListener('DOMContentLoaded', () => {
-            document.body.innerHTML += header();
+            document.body.insertAdjacentHTML('afterbegin', header());
+            document.body.insertAdjacentHTML('beforeend', menuEdicao());
+            loadAdicionarProduto();
         });
     </script>
+
+    <h1>Gerenciar Produtos</h1>
+
+    <div id="contentContainer"></div>
+
+    <script src="./src/js/produtoAdicionar.js"></script>
+    <script src="./src/js/produtoEditar.js"></script>
 </body>
-    
 </html>

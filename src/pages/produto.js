@@ -44,4 +44,7 @@ const createProductCard = (product) => {
     StoreContainer.appendChild(card);
 };
 
+
+
+
 export default fetchProducts;

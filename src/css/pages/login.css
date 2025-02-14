@@ -23,7 +23,11 @@ body{
     font-size: 40px;
     color: #ffff;
 }
-
+#sectionLogin{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
 #contentLogin{
     display: flex;
     text-align: center;
@@ -33,4 +37,58 @@ body{
     background-color: #ffff;
     width: 585px;
     height: 575px;
+}
+#formLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+h1{
+    padding-bottom: 25px;
+}
+label{
+    font-size: 13px;
+    text-align: left;
+    color: #393939;
+    width: 100%;
+    font-weight: 600;
+}
+input{
+    width: 350px;
+    height: 45px;
+    border: 1px solid #9B9B9B;
+    border-radius: 0;
+    margin-bottom: 25px;
+}
+button{
+    width: 280px;
+    height: 50px;
+    background-color: #5FADBA;
+    border: none;
+    color: #ffff;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #0191AA;
+    }
+}
+
+#cadastrar{
+    display: flex;
+    gap: 2px;
+}
+p{
+    font-size: 11px;
+    color: #393939;
+}
+a{
+    font-size: 11px;
+    color: #090089;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover{
+        color: #564aff;
+    }
 }

@@ -1,3 +1,25 @@
+const link = document.createElement('link');
+link.rel = 'stylesheet';
+link.href = './src/css/templates/menu_editar.css';
+
+document.head.appendChild(link);
+
+const menuEdicao = () => {
+    return `
+        <div class="menu">
+            <button id="adicionar">Adicionar produto</button>
+            <button id="editar">Editar produto</button>
+            <button id="deletar">Deletar produto</button>
+        </div>
+    `;
+};
+
+export default menuEdicao;
+
+
+
+
+/* 
 function createMenu() {
     const menu = document.createElement("div");
     const Adicionar_produto = document.createElement("button");
@@ -18,3 +40,4 @@ function createMenu() {
 }
 
 document.addEventListener('DOMContentLoaded', createMenu);
+*/
