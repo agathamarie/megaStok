@@ -1,0 +1,4 @@
+#contentContainer {
+    position: relative; /* ou absolute, dependendo do layout */
+    z-index: 10; /* Um valor maior que o cabeçalho */
+}

@@ -1,8 +1,7 @@
-
-    const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = './src/css/templates/header.css';
-        document.head.appendChild(link);
+const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = './src/css/templates/header.css';
+    document.head.appendChild(link);
     
 
 const header = () => {
