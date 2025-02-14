@@ -1,9 +1,9 @@
 
-    /*const link = document.createElement('link');
+    const link = document.createElement('link');
         link.rel = 'stylesheet';
         link.href = './src/css/templates/header.css';
         document.head.appendChild(link);
-    */
+    
 
 const header = () => {
     return `
@@ -18,5 +18,5 @@ const header = () => {
     `;
 };
 
-    //document.body.innerHTML += header; 
+    // document.body.innerHTML += header; 
 export default header;
